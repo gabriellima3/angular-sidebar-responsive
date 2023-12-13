@@ -1,0 +1,46 @@
+<div class="container-fluid">
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="row mb-3">
+      <div class="col-12 col-md-6">
+        <input
+          type="text"
+          class="form-control"
+          formControlName="name"
+          placeholder="Digite seu nome"
+          aria-describedby="inputGroup-sizing-lg"
+        />
+      </div>
+      <div class="col-12 col-md-6">
+        <input
+          type="text"
+          class="form-control"
+          formControlName="preco"
+          placeholder="Digite o preco"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <input
+          type="text"
+          class="form-control"
+          formControlName="tamanho"
+          placeholder="Digite o tamanho"
+        />
+      </div>
+      <div class="col-12 col-md-6">
+        <input
+          type="text"
+          class="form-control"
+          formControlName="quantidade"
+          placeholder="Digite a quantidade"
+        />
+      </div>
+    </div>
+    <div class="d-flex justify-content-end mt-3">
+      <button class="btn btn-primary" type="submit">Submeter Formulário</button>
+    </div>
+  </form>
+
+  {{ form.value | json }}
+</div>
